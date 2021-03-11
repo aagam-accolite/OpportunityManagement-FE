@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>Opportunity Management</h1>
+      <span class="menu-spacer"></span>
+      <div *ngIf="isLoggedIn">
+        <a mat-button [routerLink]="'/home'"> Home </a>
+        <a mat-button [routerLink]="'/opp'"> Opportunity </a>
+        <a mat-button [routerLink]="'/trend'"> Trends </a>
+        <a mat-button [routerLink]="'/search'"> Search </a>
+        <a mat-button [routerLink]="'/opp/audit'"> Audit </a>
+      </div>
+      <span class="example-spacer"></span>
+      <div *ngIf="isLoggedIn">
+          <a mat-button [routerLink]="'/home'"> Welcome {{name}}</a>
+          <button mat-raised-button color="warn" (click)= "signOut()">Sign Out</button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>

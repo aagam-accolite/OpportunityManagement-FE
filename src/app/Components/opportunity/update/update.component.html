@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<ng-container>
+    <form [formGroup]="oppForm">
+        <fieldset>
+            <legend><center>Update Opportunity</center></legend><br><br> 
+        <label for="Description">Description</label><input  type="text" formControlName = "description" placeholder="Description"/><br><br>
+        <label for="location">Location</label><input  type="text" formControlName = "location" placeholder="Location"/><br><br>
+        <label for="skills">Skills</label><input  type="text" formControlName = "skills" placeholder="Skills"/><br><br>
+        <label for="minExp">Minimum Experience</label><input  type="number" formControlName = "minExperience" placeholder="Minimum Experience"/><br><br>
+        <label for="Demand">Demand</label><input  type="number" formControlName = "demand" placeholder="Demand"/><br><br>
+        <label for="Date">Date</label><input  type="date" formControlName = "date" placeholder="Date"/><br><br>
+        <input type="submit" (click)="update()" value="Submit">
+    </fieldset>
+    </form>
+</ng-container>

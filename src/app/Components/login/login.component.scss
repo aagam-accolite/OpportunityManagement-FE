@@ -1,0 +1,17 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .main-div{
+    height: 90.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.pinimg.com/originals/06/de/9f/06de9fcc1251a5a1a6f08a94bc05de1c.jpg');
+    background-size: auto;
+}
+  mat-card-actions{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+  }

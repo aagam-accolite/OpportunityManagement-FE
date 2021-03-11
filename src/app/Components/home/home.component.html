@@ -1,0 +1,94 @@
+<div class="main-div">
+    <app-navbar></app-navbar>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>Opportunity</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image
+                        src="https://media.istockphoto.com/vectors/smart-businessman-looking-forward-in-spyglass-vector-id1085606706?k=6&m=1085606706&s=612x612&w=0&h=Z3DcidjK0Zfqt5MFi-SYNICQvRo5BRjIn8pZ6PbWIms="
+                        alt="Opportunity Image">
+                    <mat-card-content>
+                        Content
+                        <ul>
+                            <li>Create Opportunity</li>
+                            <li>Read Opportunity</li>
+                            <li>Update Opportunity</li>
+                            <li>Delete Opportunity</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions>
+                     <button mat-raised-button color="primary" (click) = "opportunity()"> Opportunity Management</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>Trends Analysis</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image
+                        src="https://1e7npu8x7c2v3ec29y6nl9a5-wpengine.netdna-ssl.com/wp-content/uploads/The-Top-Ecommerce-Trend-You-Need-to-Know-About-for-2020-1024x535.png"
+                        alt="Trends">
+                    <mat-card-content>
+                        Trend Analysis
+                        <ul>
+                            <li>Skill</li>
+                            <li>Location</li>
+                            <li>Min Experience</li>
+                            <li>Year on Year</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" (click)="trends()">Trend Analysis</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>Audit</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image
+                        src="https://www.pngitem.com/pimgs/m/642-6425638_audit-illustration-automate-your-business-process-hd-png.png"
+                        alt="Audit">
+                    <mat-card-content>
+                        Content
+                        <ul>
+                            <li>Version Control of Opportunity</li>
+                            <li>Log's of Opportunity</li>
+                            <li>New and Previous Value Comparision</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" (click)="audit()">Audit Analysis</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>Search Opportunity</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image
+                        src="https://img.freepik.com/free-vector/search-engines-concept-illustration_114360-2531.jpg?size=626&ext=jpg"
+                        alt="Search Image">
+                    <mat-card-content>
+                        Search Opportunity
+                        <ul>
+                            <li>Search based on Skills</li>
+                            <li>Search based on Manager</li>
+                            <li>Search based on Location</li>
+                            <li>Search based on Demand</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" (click)="search()">Search Opportunity</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -19,12 +19,13 @@ export class AuditComponent implements OnInit {
 
 
   dataSource:any;
+  expandedElement!: any;
   columnsToDisplay = ['id', 'date', 'userName', 'userEmail','operation'];
   constructor(private auditService:AuditService) { }
 
   ngOnInit(): void {
     this.auditService.getAudit().subscribe(resp=>{
-      console.log(resp);
+      //console.log(resp);
       this.dataSource = resp;
     })
   }

@@ -2,6 +2,8 @@ import { LoginService } from 'src/app/services/login.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { SocialAuthService } from "angularx-social-login";
+import { GoogleLoginProvider } from "angularx-social-login";
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +14,7 @@ export class NavbarComponent implements OnInit {
 
   isLoggedIn = false;
   name?;
-  constructor(private router: Router,private loginService:LoginService) {
+  constructor(private authService: SocialAuthService,private router: Router,private loginService:LoginService) {
     if(localStorage.getItem("userName")){
       this.isLoggedIn = true;
       this.name = localStorage.getItem("userName");
@@ -23,6 +25,7 @@ export class NavbarComponent implements OnInit {
    }
 
    signOut(){
+     this.authService.signOut();
      localStorage.clear();
      this.router.navigateByUrl('/');
    }

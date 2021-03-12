@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Social Media , Form and HTTP Connection
-import { SocialAuthService } from "angularx-social-login"
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import {GoogleLoginProvider} from 'angularx-social-login';
 
 
 // Material UI
@@ -68,9 +69,23 @@ import { AuditComponent } from './Components/audit/audit.component';
     ReactiveFormsModule,
     MatSelectModule,
     NgxChartsModule,
-    MatGridListModule
+    MatGridListModule,
+    SocialLoginModule
   ],
-  providers: [SocialAuthService,LoginService],
+  providers: [{
+    provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: false,
+      providers: [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider(
+            '431647069953-otu3aeraed2sh5eknao15c3l1rquc16u.apps.googleusercontent.com'
+          )
+        }
+      ]
+    } as SocialAuthServiceConfig,
+  },LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

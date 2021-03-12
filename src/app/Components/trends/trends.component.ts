@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { TrendsService } from 'src/app/services/trends.service';
 
 @Component({
@@ -6,9 +6,9 @@ import { TrendsService } from 'src/app/services/trends.service';
   templateUrl: './trends.component.html',
   styleUrls: ['./trends.component.scss']
 })
-export class TrendsComponent implements OnInit {
+export class TrendsComponent implements OnInit,OnChanges {
 
-  view: any[] = [600, 300];
+  view: [number,number] = [600, 300];
   // options for the chart
   showXAxis = true;
   showYAxis = true;
@@ -32,22 +32,32 @@ export class TrendsComponent implements OnInit {
   minxp!:any;
 
   constructor(private trendService: TrendsService) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    this.trendService.getLoc().subscribe(data=>{
+      this.loc = data;
+    })
+    this.trendService.getSkills().subscribe(data=>{
+     this.skills = data;
+   })
+   this.trendService.getDemand().subscribe(data=>{
+     this.demand = data;
+   })
+   this.trendService.getMinExp().subscribe(data=>{
+     this.minxp = data;
+   })
+  }
 
   ngOnInit(): void {
    this.trendService.getLoc().subscribe(data=>{
-     //console.log(data);
      this.loc = data;
    })
    this.trendService.getSkills().subscribe(data=>{
-    //console.log(data);
     this.skills = data;
   })
   this.trendService.getDemand().subscribe(data=>{
-    //console.log(data);
     this.demand = data;
   })
   this.trendService.getMinExp().subscribe(data=>{
-    //console.log(data);
     this.minxp = data;
   })
   }

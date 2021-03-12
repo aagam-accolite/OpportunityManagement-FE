@@ -29,12 +29,4 @@ export class LoginService {
     console.log(user);
     return this.http.post(this.BASE_URL + this.LOGIN, user);
   }
-
-  public getUserByEmailFromRemote(email: string): Observable<any> {
-    return this.http.get(this.BASE_URL + this.GET_USER_BY_EMAIL + email);
-  }
-
-  public getAll():Observable<any>{
-    return this.http.get(this.BASE_URL+"user/getAll/");
-  }
 }

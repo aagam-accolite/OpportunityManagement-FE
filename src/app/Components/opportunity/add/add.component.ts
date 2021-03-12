@@ -23,7 +23,7 @@ export class AddComponent implements OnInit {
       description: new FormControl("", (Validators.required, Validators.minLength(3), Validators.maxLength(50))),
       location: new FormControl("", (Validators.required, Validators.maxLength(150), Validators.minLength(4))),
       skills: new FormControl("", (Validators.required)),
-      minExp: new FormControl("", (Validators.required)),
+      minExperience: new FormControl("", (Validators.required)),
       demand: new FormControl("", (Validators.required)),
       date: new FormControl("", (Validators.required)),
     });

@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'search', pathMatch: 'full', component: SearchComponent},
   {path: 'opp/audit', pathMatch: 'full', component: AuditComponent},
   {path:'trend',pathMatch:'full',component:TrendsComponent},
+  {path:'**',pathMatch:'full',component:HomeComponent}
 ];
 
 @NgModule({

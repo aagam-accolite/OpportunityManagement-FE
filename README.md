@@ -1,3 +1,38 @@
+# Opportunity Managment
+
+### Techstack
+- Java 1.8
+- Angular 11
+- Spring Boot
+
+### Features
+
+-  Add, Delete and Update Opportunity
+- Search Opportunity based on Skills,Location and Description
+- Graphical Representation of Trends of Opportunity
+- Audit Feature for Logging of all Activites
+
+### Screen shot of Application
+
+
+### Video Link
+
+
+### Installation Steps
+
+#### Frontend Installation 
+
+`$ npm i`
+
+`$ npm start `
+
+#### Backend Installation
+
+`Open Project in Intellij Idea as Spring Project`
+
+`Run the Project as Spring Application`
+
+
 # Opportunityapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
